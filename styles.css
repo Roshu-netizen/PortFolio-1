@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: black;
+}
+
+/* .center {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  } */
+/* Navbar */
+.navbar-1 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.coloring {
+  color: purple;
+}
+.fs-1 {
+  font-size: 25px !important;
+}
+.navbar-side-2 {
+  display: flex;
+  align-items: center;
+  gap: 75px;
+  color: purple;
+  font-size: px;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+
+/* Navbar end */
+
+/* Another */
+.p-1 {
+    font-weight: 700;
+    text-align: center;
+    font-size: 40px;
+    font-family: Hack, sans-serif;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    letter-spacing: 5px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    position: relative;
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    0% {
+        background-position-x: -500%;
+    }
+    100% {
+        background-position-x: 500%;
+    }
+}
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black; /* Adjust opacity as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  #content {
+    display: none;
+  }
+#splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Adjust background color as needed */
+    z-index: 9999; /* Ensure it's on top */
+  }
+  
+  #content {
+    display: none;
+  }
+/* Container styles */
+.img-size {
+  width: 320px;
+  height: 100%;
+}
+.img-size-1 {
+  width: 200px;
+  height: 100%;
+}
+.img-size-4 {
+  width: 200px;
+  height: 100%;
+}
+.img-container {
+  display: flex;
+}
+.img-container-1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.img-container-2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.coloring-1 {
+  color: purple;
+  transition: all 1s ease;
+}
+
+.table {
+  /* width: 790px; */
+  height: 150px;
+  /* background-color: #d4e5ff; */
+}
+
+.table .monitor-wrapper {
+  /* background: #050321; */
+  /* width: 770px; */
+  /* height: 130px; */
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.table .monitor-wrapper .monitor {
+  width: 100%;
+  height: 150px;
+  /* background-color: #344151; */
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: inset 0px 5px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+.table .monitor-wrapper .monitor p {
+  font-family: "VT323", monospace;
+  font-size: 100px;
+  position: relative;
+  display: inline-block;
+  animation: move 20s infinite linear;
+  color: #ebb55f;
+}
+
+@keyframes move {
+  from {
+    left: 800px;
+  }
+  to {
+    left: -4800px;
+  }
+}
+
+.respon {
+  width: 100% !important;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 576px) {
+  .p-1 {
+    font-size: 15px !important;
+  }
+  .img-container-1 {
+    flex-direction: column !important;
+  }
+  .img-container-2 {
+    flex-direction: column !important;
+  }
+  .respon {
+    font-size: 30px !important;
+  }
+  .table .monitor-wrapper .monitor {
+    margin-top: 50px !important;
+    height: 100px !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .respo {
+    flex-direction: column !important;
+    width: 100%;
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #333;
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #000000;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 50%;
+    z-index: 999;
+    height: 110vh;
+    left: 68%;
+    transition: all 0.5s ease-in-out; 
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu li {
+  text-align: center;
+  padding: 15px;
+}
+
+/* Media query for screens smaller than 991px */
+@media (max-width: 991px) {
+  .navbar-side {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  /* Add this class to the body when the hamburger is clicked */
+  body.menu-open .mobile-menu {
+    display: block;
+  }
+}
